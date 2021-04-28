@@ -1,0 +1,114 @@
+// BREAKPOINTS
+$small-bp: 576px;
+$medium-bp: 768px;
+$large-bp: 992px;
+
+// TEXTS & FONTS
+h1, h2, h3, h4, h5, h6, p, a, span{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+h3{
+    font-style: oblique;
+    margin-bottom: 3rem;
+}
+
+// COLORS
+$white: #ffffff;
+$black: #000000;
+$light-grey: #cfd8dc;
+$dark-grey: #3d3d3d;
+$dark-blue: #111819;
+
+//TEXT COLORS
+.txt-white{
+    color: $white !important;
+}
+.txt-black{
+    color: $black !important;
+}
+.txt-light-grey{
+    color: $light-grey !important;
+}
+.txt-dark-grey{
+    color: $dark-grey !important;
+}
+
+//BACKGROUND COLORS
+.bg-white{
+    background-color: $white;
+}
+.bg-light-grey{
+    background-color: $light-grey;
+}
+.bg-dark-grey{
+    background-color: $dark-grey;
+}
+.bg-dark-blue{
+    background-color: $dark-blue;
+}
+
+// GRADIENTS
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+// GLOBAL
+body{
+    margin: 0;
+    .hidden {
+        visibility: hidden;
+    }
+    .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+        .row{
+            --bs-gutter-x: 0rem;
+            .inside-container{
+                position: relative;
+                padding: 10vh 10vw;
+                @media (max-width: $medium-bp){
+                    padding: 5vh 2.5vw;
+                }
+            }
+        }        
+    }
+    .modal-backdrop {
+        opacity: 0.75;
+    }
+}
+
+//BUTTONS
+button {
+    cursor: pointer;
+    &:focus {
+        outline: 0;
+    }
+}
+
+// IMAGES
+img.circle{
+    border-radius: 50vw;
+}
+
+// LISTS
+ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}

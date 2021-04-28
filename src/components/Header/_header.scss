@@ -1,0 +1,36 @@
+#header{
+    padding: 15vh 0;
+    img{
+        width: 15vw;
+        height: auto;        
+        position: absolute;
+        z-index: 10;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: -20vh;      
+        border: 1vh solid $white;
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 
+                    0 3px 14px 2px rgba(0, 0, 0, 0.12), 
+                    0 5px 5px -3px rgba(0, 0, 0, 0.3);
+        background-color: $white;
+        @media (max-width: $medium-bp){
+            width: 40vw;
+            top: -20vh
+        }
+    }
+    h1, h2{
+        word-spacing: 10px;
+        letter-spacing: 5px;
+    }
+    h1{
+        font-weight: 700;
+    }
+    i{
+        font-size: 2rem;
+        margin-top: 10vh;
+    }
+    @media (max-width: $medium-bp){
+        padding: 5vh 0;
+    }
+}

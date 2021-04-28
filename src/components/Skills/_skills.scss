@@ -1,0 +1,57 @@
+#skills{
+    .accordion{
+        .card{
+            width: 60%;
+            margin: 10px auto;
+            box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            .card-header{
+                cursor: pointer;
+                outline: none;
+                padding: 1rem 0;
+                i{
+                    margin-right: 10px;
+                }
+            }
+            .card-body{                
+                ul{
+                    li{
+                        position: relative;
+                        list-style: none;
+                        text-align: center;                        
+                        padding: 10px;
+                        border-bottom: 1px solid $light-grey;
+                        img{                            
+                            width: auto;
+                            max-width: 60px;
+                            height: auto;
+                            max-height: 60px;
+                            margin-right: 20px;
+                            margin-left: -60px;
+                        }
+                        span{
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -0.5rem;
+                        }
+                        &:last-child{
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+            @media (max-width: $medium-bp){
+                width: 80%;
+                .card-body{                
+                    ul{
+                        li{
+                            text-align: left;
+                            img{
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
