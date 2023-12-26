@@ -16,7 +16,7 @@
 					<ul class="sidebar-panel-nav">
 						<li><router-link to="/" class="txt-white">Home</router-link></li>
 						<!--<li><router-link to="/contact" class="txt-white">Contact</router-link></li>-->
-						<li><a class="txt-white" href="./LAGACHE_Arnaud_CV2021.pdf" target="_blank">CV <i class="fas fa-file-download"></i></a></li>
+						<li><a class="txt-white" href="./LAGACHE_Arnaud_CV.pdf" target="_blank">CV <i class="fas fa-file-download"></i></a></li>
 					</ul>
 				</Sidebar>
 				

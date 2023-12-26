@@ -10,10 +10,9 @@
                             <h4>Sites Web</h4>
                             <div>
                                 <b-card-group deck>
-
                                     <b-card v-for="(website, index) in websites" :key="index">
-                                        <div class="card-img">
-                                            <b-img :src="website.imgURL" fluid :alt="website.imgAlt"></b-img>
+                                        <div class="card-img" v-b-modal="websiteModalId(index)">
+                                            <b-img :src="website.imgURL" fluid :alt="website.imgAlt"></b-img>                                            
                                         </div>
                                         <b-card-text>
                                             <a :href="website.link" target="_blank" class="bg-dark-blue txt-white"><i class="fas fa-angle-double-right"></i></a>
@@ -23,8 +22,10 @@
                                                 <li v-for="techno in website.technos" :key="techno">{{techno}}</li>
                                             </ul>
                                         </b-card-text>
+                                        <b-modal :id="websiteModalId(index)" hide-footer="true">
+                                            <b-img :src="website.imgURL" fluid :alt="website.imgAlt"></b-img>
+                                        </b-modal>
                                     </b-card>
-
                                 </b-card-group>
                             </div>
                         </b-col>
@@ -33,9 +34,8 @@
                             <h4>Landing Pages</h4>
                             <div>
                                 <b-card-group deck>
-
                                     <b-card v-for="(landing, index) in landings" :key="index">
-                                        <div class="card-img">
+                                        <div class="card-img" v-b-modal="landingModalId(index)">
                                             <b-img :src="landing.imgURL" fluid :alt="landing.imgAlt"></b-img>
                                         </div>
                                         <b-card-text>
@@ -45,8 +45,10 @@
                                                 <li v-for="techno in landing.technos" :key="techno">{{techno}}</li>
                                             </ul>
                                         </b-card-text>
+                                        <b-modal :id="landingModalId(index)" hide-footer="true" hide-header="true">
+                                            <b-img :src="landing.imgURL" fluid :alt="landing.imgAlt"></b-img>
+                                        </b-modal>
                                     </b-card>
-
                                 </b-card-group>
                             </div>
                         </b-col>
@@ -55,9 +57,8 @@
                             <h4>Newsletters</h4>
                             <div>
                                 <b-card-group deck>
-
                                     <b-card v-for="(newsletter, index) in newsletters" :key="index">
-                                        <div class="card-img">
+                                        <div class="card-img" v-b-modal="newsModalId(index)">
                                             <b-img :src="newsletter.imgURL" fluid :alt="newsletter.imgAlt"></b-img>
                                         </div>
                                         <b-card-text>
@@ -67,8 +68,10 @@
                                                 <li v-for="techno in newsletter.technos" :key="techno">{{techno}}</li>
                                             </ul>
                                         </b-card-text>
+                                        <b-modal :id="newsModalId(index)" hide-footer="true" hide-header="true">
+                                            <b-img :src="newsletter.imgURL" fluid :alt="newsletter.imgAlt"></b-img>
+                                        </b-modal>
                                     </b-card>
-
                                 </b-card-group>
                             </div>
                         </b-col> 
@@ -102,6 +105,14 @@ export default {
                     link : 'https://www.sncf-reseau.com/fr',
                     description: 'Refonte de site', 
                     technos: ['Drupal avec thème custom', 'Responsive Design', 'Framework CSS']                    
+                },
+                {
+                    title: 'SIPA Menuiseries', 
+                    imgURL: require('@/assets/images/projects/site/sipa.png'), 
+                    imgAlt: 'SIPA Menuiseries',
+                    link : 'https://sipa-sas.fr/',
+                    description: 'Création de site', 
+                    technos: ['WordPress avec thème custom', 'Responsive Design', 'Framework CSS']                    
                 }
             ],
 
@@ -146,6 +157,17 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        websiteModalId(index) {
+            return 'websiteModal' + index;
+        },
+        landingModalId(index) {
+            return 'landingModal' + index;
+        },
+        newsModalId(index) {
+            return 'newsModal' + index;
+        },
     },
 }
 </script>

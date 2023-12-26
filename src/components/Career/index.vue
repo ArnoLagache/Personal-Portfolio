@@ -13,7 +13,7 @@
                                 {{Career.title}}&nbsp;
                                 <i v-if="Career.graduated" class="fas fa-graduation-cap" aria-hidden="true"></i>
                                 <i v-if="Career.employed" class="fas fa-briefcase" aria-hidden="true"></i>
-                            <p/>
+                            </p>
                             <p class="city">{{Career.city}}</p>
                         </b-col>
                     </b-row>
@@ -75,7 +75,13 @@ export default {
                         title: 'Freelance - Intégrateur Web',
                         city: 'Lille',
                         employed: true
-                    }                    
+                    },
+                    {
+                        year: '2021',
+                        title: 'AKAWAM - Développeur Front-End',
+                        city: 'Villeneuve d\'Ascq',
+                        employed: true
+                    },              
                 ]
             }
         }

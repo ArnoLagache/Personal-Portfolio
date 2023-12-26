@@ -86,15 +86,22 @@ export default {
                     title: 'Sass'
                 },
                 {
+                    imgURL: require('@/assets/images/logos/tailwind-logo.png'),
+                    imgAlt: 'Tailwind CSS',
+                    title: 'Tailwind'
+                },
+                {
                     imgURL: require('@/assets/images/logos/bootstrap-logo.jpg'),
                     imgAlt: 'Bootstrap',
                     title: 'Bootstrap'
                 },
+                /*
                 {
                     imgURL: require('@/assets/images/logos/materializecss-logo.png'),
                     imgAlt: 'MaterializeCSS',
                     title: 'MaterializeCSS'
                 },
+                */
             ],
             Medium: [
                 {
@@ -125,15 +132,15 @@ export default {
                     title: 'Vue.js'
                 },
                 {
-                    imgURL: require('@/assets/images/logos/jquery-logo.gif'),
-                    imgAlt: 'jQuery',
-                    title: 'jQuery'
-                },
-                {
                     imgURL: require('@/assets/images/logos/js-logo.png'),
                     imgAlt: 'JS',
                     title: 'JS'
                 },
+                {
+                    imgURL: require('@/assets/images/logos/jquery-logo.gif'),
+                    imgAlt: 'jQuery',
+                    title: 'jQuery'
+                },                
             ]
         }
     }
